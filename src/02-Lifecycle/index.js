@@ -25,15 +25,10 @@ const Lifecycle = () => (
         <InlineCode>super(props)</InlineCode> antes de cualquier otra cosa.
         Aqui se puede inicializar el estado o bindear metodos.
       </p>
-      <Header as="h6" style={{ fontSize: '1.8em' }}>getDerivedStateFromProps(nextProps, nextState)</Header>
+      <Header as="h6" style={{ fontSize: '1.8em' }}>getDerivedStateFromProps(nextProps, prevState)</Header>
       <p style={{ fontSize: '1.20em' }}>
         Nueva API. Llamado cuando se inicializa el componente y cuando cambian las props.
-        Debe devolver el nuevo estado o null sino cambio.
-      </p>
-      <Header as="h6" style={{ fontSize: '1.8em' }}>getDerivedStateFromProps(nextProps, nextState)</Header>
-      <p style={{ fontSize: '1.20em' }}>
-        Nueva API. Llamado cuando se inicializa el componente y cuando cambian las props.
-        Debe devolver el nuevo estado o null sino cambio.
+        Debe devolver un objecto para actualizar el estado o null sino cambio.
       </p>
       <Header as="h6" style={{ fontSize: '1.8em' }}>[UNSAFE_]componentWillMount()</Header>
       <p style={{ fontSize: '1.20em' }}>

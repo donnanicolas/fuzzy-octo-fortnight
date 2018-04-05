@@ -12,7 +12,7 @@ import {
 
 import reactLogo from './react.png';
 import diff from './diff.jpg';
-import { Code } from '../components/CodeBlock';
+import { Code, InlineCode } from '../components/CodeBlock';
 
 const codeExample = `React.createElement(
   'div', 
@@ -35,6 +35,7 @@ const Intro = () => (
               <List.Item>Declarativa</List.Item>
               <List.Item>Utiliza Virtual DOM</List.Item>
               <List.Item>Es puro JS sin templating</List.Item>
+              <List.Item>Tiene Server Side rendering</List.Item>
             </List>
             <Header as="h4" style={{ fontSize: '2em' }}>Virtual DOM</Header>
             <List bulleted>
@@ -81,7 +82,7 @@ const Intro = () => (
         <List bulleted>
           <List.Item>React solo trabaja con vDOM</List.Item>
           <List.Item>Necesita alguien que haga el render real</List.Item>
-          <List.Item>Hay muchos los mas conocidos: DOM y Native</List.Item>
+          <List.Item>Hay muchos los mas conocidos: DOM, Servery Native</List.Item>
           <List.Item>
             Otros:
             <List.List>
@@ -104,6 +105,16 @@ const Intro = () => (
           <List.Item>Se compara el vDOM actual con el resultando</List.Item>
           <List.Item>Se marcan los nodos que se necesitan cambiar</List.Item>
           <List.Item>Se pasan los nodos marcados a quien hace el render real</List.Item>
+          <List.Item>
+            <strong>Asume dos cosas</strong>
+            <List bulleted>
+              <List.Item>Que si el nodo es distinto, todo es distinto</List.Item>
+              <List.Item>
+                El desarrollador puede indicar con <InlineCode>key</InlineCode>
+                los nodos estables a traves del render.
+              </List.Item>
+            </List>
+          </List.Item>
         </List>
         <Image
           bordered

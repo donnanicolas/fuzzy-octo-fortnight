@@ -13,8 +13,11 @@ import Intro from './00-Intro';
 import Basic from './01-Basic';
 import Lifecycle from './02-Lifecycle';
 import State from './03-State';
+import Redux from './04-Redux';
+import ReduxReact from './05-ReduxReact';
 
 import JSX from './e01-JSX';
+import Typing from './e02-Typing';
 
 const menuStyle = {
   border: 'none',
@@ -69,24 +72,14 @@ class App extends Component {
               <Menu.Item as={Link} to="/Basic">Basic</Menu.Item>
               <Menu.Item as={Link} to="/Lifecycle">Lifecycle</Menu.Item>
               <Menu.Item as={Link} to="/State">State</Menu.Item>
+              <Menu.Item as={Link} to="/Redux">Redux</Menu.Item>
+              <Menu.Item as={Link} to="/ReduxReact">ReduxReact</Menu.Item>
 
               <Menu.Menu position="right">
                 <Dropdown text="Extra" pointing className="link item">
                   <Dropdown.Menu>
                     <Dropdown.Item as={Link} to="/JSX">JSX</Dropdown.Item>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Header>Header Item</Dropdown.Header>
-                    <Dropdown.Item>
-                      <i className="dropdown icon" />
-                      <span className="text">Submenu</span>
-                      <Dropdown.Menu>
-                        <Dropdown.Item>List Item</Dropdown.Item>
-                        <Dropdown.Item>List Item</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown.Item>
-                    <Dropdown.Item>List Item</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/Typing">Typing</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </Menu.Menu>
@@ -99,6 +92,9 @@ class App extends Component {
           <Route path="/Basic" component={Basic} />
           <Route path="/Lifecycle" component={Lifecycle} />
           <Route path="/State" component={State} />
+          <Route path="/Redux" component={Redux} />
+          <Route path="/ReduxReact" component={ReduxReact} />
+          <Route path="/Typing" component={Typing} />
           <Route path="/JSX" component={JSX} />
         </Container>
         <Segment inverted vertical style={{ padding: '5em 0em', marginTop: 20 }}>
