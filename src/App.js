@@ -18,6 +18,7 @@ import ReduxReact from './05-ReduxReact';
 
 import JSX from './e01-JSX';
 import Typing from './e02-Typing';
+import Moar from './e03-Moar';
 
 const menuStyle = {
   border: 'none',
@@ -80,6 +81,7 @@ class App extends Component {
                   <Dropdown.Menu>
                     <Dropdown.Item as={Link} to="/JSX">JSX</Dropdown.Item>
                     <Dropdown.Item as={Link} to="/Typing">Typing</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/Moar">Moar</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </Menu.Menu>
@@ -96,6 +98,7 @@ class App extends Component {
           <Route path="/ReduxReact" component={ReduxReact} />
           <Route path="/Typing" component={Typing} />
           <Route path="/JSX" component={JSX} />
+          <Route path="/Moar" component={Moar} />
         </Container>
         <Segment inverted vertical style={{ padding: '5em 0em', marginTop: 20 }}>
           <Container>

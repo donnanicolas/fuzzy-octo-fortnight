@@ -2,9 +2,12 @@ import React, { Fragment } from 'react';
 import {
   Header,
   Segment,
+  Image,
 } from 'semantic-ui-react';
 
 import { InlineCode } from '../components/CodeBlock';
+
+import lifecycle from './download.jpeg';
 
 const Lifecycle = () => (
   <Fragment>
@@ -65,6 +68,7 @@ const Lifecycle = () => (
       <p style={{ fontSize: '1.20em' }}>
         Se llama antes de que el componente se desmonte. Utilizado para limpiar referencias y demas
       </p>
+      <Image src={lifecycle} />
     </Segment>
   </Fragment>
 );
